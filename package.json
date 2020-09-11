@@ -3,13 +3,16 @@
   "version": "0.1.0-alpha1",
   "description": "A PostCSS plugin that helps you automatically apply `clamp()` to values to achieve a fluid design efficently.",
   "main": "./dist/index.cjs.js",
-  "directories": {
-    "test": "test"
-  },
+  "files": [
+    "src/",
+    "dist/"
+  ],
   "dependencies": {},
   "devDependencies": {},
   "scripts": {
-    "test": "mocha"
+    "prepublish": "npm run build",
+    "test": "npx mocha --recursive './test/**/*.js' --require esm",
+    "build": "NODE_ENV=production npx rollup -c;"
   },
   "repository": {
     "type": "git",
