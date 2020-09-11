@@ -1,0 +1,30 @@
+{
+  "name": "bewater",
+  "version": "0.1.0-alpha1",
+  "description": "A PostCSS plugin that helps you automatically apply `clamp()` to values to achieve a fluid design efficently.",
+  "main": "./dist/index.cjs.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winston0410/bewater.git"
+  },
+  "keywords": [
+    "PostCSS",
+    "postcss plugin",
+    "PostCSS-Sparrow",
+    "clamp"
+  ],
+  "author": "Hugo Sum",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/winston0410/postcss-declarations-bundler/issues"
+  },
+  "homepage": "https://github.com/winston0410/postcss-declarations-bundler#readme"
+}
