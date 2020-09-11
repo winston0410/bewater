@@ -5,6 +5,20 @@ export default (config) => (decl) => {
     scale: config.scale,
     changeRate: config.changeRate
   }
+
+  return require('postcss-sparrow-props-filter')({
+    props: ['*'],
+    inclusion: true,
+    callbacks: [
+      require('postcss-sparrow-units-filter')({
+        units: ['*'],
+        inclusion: true,
+        callbacks: [
+
+        ]
+      })
+    ]
+  })
 }
 
 // const options = {

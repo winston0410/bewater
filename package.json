@@ -11,6 +11,7 @@
     "eslint-plugin-ramda": "^2.5.1",
     "postcss": "^7.0.32",
     "postcss-sparrow": "^0.4.3",
+    "postcss-sparrow-props-filter": "^0.1.4",
     "postcss-sparrow-units-filter": "^0.1.4",
     "postcss-sparrow-values-filter": "^0.1.2",
     "ramda": "^0.27.1",
