@@ -1,5 +1,5 @@
 import * as R from 'ramda'
 
-export default () => {
+export default (options) => (decl) => {
 
 }
