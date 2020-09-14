@@ -1,19 +1,8 @@
 import {
-  calculateMaxSize
+  getMaxSize
 } from './utilities/helper.js'
 
 import * as S from 'sanctuary'
-
-const clampValue = (decl) => {
-
-}
-
-const getValue = S.prop('value')
-
-const getMaxSize = (options) => (decl) => S.pipe([
-  getValue,
-  calculateMaxSize(options)
-])(decl)
 
 export default (config) => (decl) => {
   const options = {

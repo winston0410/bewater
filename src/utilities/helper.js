@@ -8,18 +8,11 @@ import {
 
 import * as S from 'sanctuary'
 
-// const unitList = [
-//   'px', 'fr', '%', 'em', 'rem', 'vw', 'vh', 'vmin', 'vmax', 'ch'
-// ]
-//
-// const stripUnit = (value) => S.pipe([
-//   S.map(S.stripSuffix),
-//   S.map(
-//     S.T(value)
-//   ),
-//   (v) => (console.log(v), v)
-// ])(unitList)
+const getMaxSize = (options) => (decl) => S.pipe([
+  getValue,
+  calculateMaxSize(options)
+])(decl)
 
 export {
-  calculateMaxSize
+  getMaxSize
 }
