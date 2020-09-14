@@ -1,3 +1,7 @@
+import {
+  calculateMaxSize
+} from './utilities/helper.js'
+
 import * as S from 'sanctuary'
 
 const clampValue = (decl) => {
@@ -5,10 +9,6 @@ const clampValue = (decl) => {
 }
 
 const getValue = S.prop('value')
-
-const calculateMaxSize = (sx) => {
-  console.log(sx)
-}
 
 const getMaxSize = (options) => (decl) => S.pipe([
   getValue,
@@ -29,10 +29,7 @@ export default (config) => (decl) => {
         units: ['*'],
         inclusion: true,
         callbacks: [
-          S.pipe([
-            getMaxSize(options)
-
-          ])
+          getMaxSize(options)
         ]
       })
     ]

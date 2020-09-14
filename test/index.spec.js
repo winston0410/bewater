@@ -1,9 +1,9 @@
 const postcss = require('postcss')
-const sparrow = require('../src/index.js')
 const R = require('ramda')
 const chai = require('chai')
 const sinon = require('sinon')
 const expect = chai.expect
+const bewater = require('../src/index.js')
 
 describe('Be water', function () {
   let css, beforeDeclCount
@@ -22,11 +22,6 @@ describe('Be water', function () {
       color: #be132d;
       border: 2px solid #f5f5f5;
     }`
-
-    const beforeTransformation = postcss
-      .parse(css, {
-        from: undefined
-      })
   })
 
   afterEach(function () {
@@ -34,8 +29,25 @@ describe('Be water', function () {
   })
 
   describe('when the value of the filtered rule has unit', function () {
-    it('should transform it with clamp()', function () {
+    it('should transform it with clamp()', async function () {
+      const result = await postcss([
+        require('postcss-sparrow')({
+          transformations: [
+            {
+              selectors: ['*'],
+              inclusion: true,
+              callbacks: [
+                bewater.default({})
+              ]
+            }
+          ]
+        })
+      ])
+        .process(css, {
+          from: undefined
+        })
 
+      // console.log(result)
     })
   })
 })
