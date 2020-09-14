@@ -39,7 +39,9 @@ describe('Be water', function () {
               callbacks: [
                 bewater.default({
                   scale: 2,
-                  changeRate: '2vw'
+                  changeRate: '2vw',
+                  props: ['*'],
+                  units: ['*']
                 })
               ]
             }
