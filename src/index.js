@@ -1,5 +1,20 @@
 import * as S from 'sanctuary'
 
+const clampValue = (decl) => {
+
+}
+
+const getValue = S.prop('value')
+
+const calculateMaxSize = (sx) => {
+  console.log(sx)
+}
+
+const getMaxSize = (options) => (decl) => S.pipe([
+  getValue,
+  calculateMaxSize
+])(decl)
+
 export default (config) => (decl) => {
   const options = {
     scale: config.scale,
@@ -14,15 +29,12 @@ export default (config) => (decl) => {
         units: ['*'],
         inclusion: true,
         callbacks: [
+          S.pipe([
+            getMaxSize(options)
 
+          ])
         ]
       })
     ]
   })
 }
-
-// const options = {
-//   props: R.defaultTo(['display'])(getProps(config)),
-//   values: R.defaultTo(['none'])(getValues(config)),
-//   declValue: R.defaultTo('auto')(getDeclValue(config))
-// }
