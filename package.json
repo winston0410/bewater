@@ -12,7 +12,7 @@
     "postcss": "^7.0.32",
     "postcss-sparrow": "^0.4.3",
     "postcss-sparrow-props-filter": "^0.1.4",
-    "postcss-sparrow-units-filter": "^0.1.4",
+    "postcss-sparrow-units-filter": "^0.1.6",
     "postcss-sparrow-values-filter": "^0.1.2",
     "ramda": "^0.27.1",
     "sanctuary": "^3.1.0"
@@ -24,7 +24,7 @@
     "chai": "^4.2.0",
     "chai-arrays": "^2.2.0",
     "chai-match": "^1.1.1",
-    "eslint": "^7.8.1",
+    "eslint": "^7.9.0",
     "eslint-config-standard": "^14.1.1",
     "eslint-plugin-chai-expect": "^2.2.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
