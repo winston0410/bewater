@@ -7,15 +7,17 @@ import * as S from 'sanctuary'
 export default (config) => (decl) => {
   const options = {
     scale: config.scale,
-    changeRate: config.changeRate
+    changeRate: config.changeRate,
+    props: config.props,
+    units: config.units
   }
 
   return require('postcss-sparrow-props-filter')({
-    props: ['*'],
+    props: options.props,
     inclusion: true,
     callbacks: [
       require('postcss-sparrow-units-filter')({
-        units: ['*'],
+        units: options.units,
         inclusion: true,
         callbacks: [
           (decl) => {
