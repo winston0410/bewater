@@ -29,10 +29,11 @@ export default (config) => (decl) => {
         units: ['*'],
         inclusion: true,
         callbacks: [
-          (v) => S.pipe([
-            getMaxSize(options),
-            (v) => console.log(v)
-          ])(v)
+          (decl) => {
+            const maxSize = getMaxSize(options)(decl)
+            const clampedValue = `clamp(${decl.value}, ${options.changeRate}, ${maxSize})`
+            decl.replaceWith(`${decl.prop}: ${clampedValue}`)
+          }
         ]
       })
     ]
