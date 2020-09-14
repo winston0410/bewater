@@ -12,7 +12,7 @@ const getValue = S.prop('value')
 
 const getMaxSize = (options) => (decl) => S.pipe([
   getValue,
-  calculateMaxSize
+  calculateMaxSize(options)
 ])(decl)
 
 export default (config) => (decl) => {
@@ -29,7 +29,10 @@ export default (config) => (decl) => {
         units: ['*'],
         inclusion: true,
         callbacks: [
-          getMaxSize(options)
+          (v) => S.pipe([
+            getMaxSize(options),
+            (v) => console.log(v)
+          ])(v)
         ]
       })
     ]

@@ -37,7 +37,10 @@ describe('Be water', function () {
               selectors: ['*'],
               inclusion: true,
               callbacks: [
-                bewater.default({})
+                bewater.default({
+                  scale: 2,
+                  changeRate: '2vw'
+                })
               ]
             }
           ]
