@@ -36,5 +36,5 @@ export default (config) => (decl) => {
         ]
       })
     ]
-  })
+  })(decl)
 }
