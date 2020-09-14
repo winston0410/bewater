@@ -15,6 +15,34 @@ p{
 
 ```
 
+```javascript
+//postcss.config.js
+module.exports = {
+  plugins: [
+    //Other plugins...
+
+    require('postcss-sparrow')({
+      transformations: [
+        {
+          selectors: ['*'],
+          inclusion: true,
+          callbacks: [
+            require('bewater')(
+              {
+                props: ['font-size'],
+                units: ['*'],
+                scale: 1.5, //Multiplier for the original value, and the product will be used as the 3rd param for clamp()
+                changeRate: '4vw' //The rate for the value to change.  This value will be used as the 2nd param for clamp()
+              }
+            )
+          ]
+        }
+      ]
+    })
+  ]
+}
+```
+
 ```css
 /* After transformation */
 p{
