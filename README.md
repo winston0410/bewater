@@ -29,8 +29,14 @@ module.exports = {
           callbacks: [
             require('bewater')(
               {
-                props: ['font-size'],
-                units: ['*'],
+                props: {
+                  props: ['font-size'],
+                  inclusion: true
+                },
+                units: {
+                  units: ['*'],
+                  inclusion: true
+                },
                 scale: 1.5, //Multiplier for the original value, and the product will be used as the 3rd param for clamp()
                 changeRate: '4vw' //The rate for the value to change.  This value will be used as the 2nd param for clamp()
               }
