@@ -4,8 +4,6 @@
 
 A PostCSS plugin that helps you automatically apply `clamp()` to values to achieve a fluid design efficently.
 
-**This project is not completed yet**
-
 ```css
 /* Before transformation */
 p{
@@ -60,7 +58,7 @@ Download both `postcss-sparrow` and this plugin through NPM.
 
 ```shell
 
-npm i postcss-sparrow bewater
+npm i postcss postcss-sparrow bewater
 
 ```
 
