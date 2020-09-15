@@ -2,6 +2,8 @@
 
 **Be water, be fluid, be responsive.**
 
+![Cover image for Be water](/gilles-rolland-monnet-water.jpg)
+
 A PostCSS plugin that helps you automatically apply `clamp()` to values to achieve a fluid design efficently.
 
 This plugin uses [PostCSS Sparrow](https://www.npmjs.com/package/postcss-sparrow), [PostCSS Sparrow Units Filter](https://www.npmjs.com/package/postcss-sparrow-units-filter) and [PostCSS Sparrow Props Filter](https://www.npmjs.com/package/postcss-sparrow-props-filter) under the hood for filtering CSS declarations.
