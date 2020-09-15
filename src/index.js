@@ -8,17 +8,23 @@ export default (config) => (decl) => {
   const options = {
     scale: config.scale,
     changeRate: config.changeRate,
-    props: config.props,
-    units: config.units
+    props: {
+      props: config.props.props,
+      inclusion: config.props.inclusion
+    },
+    units: {
+      units: config.units.units,
+      inclusion: config.units.inclusion
+    }
   }
 
   return require('postcss-sparrow-props-filter')({
-    props: options.props,
-    inclusion: true,
+    props: options.props.props,
+    inclusion: options.props.inclusion,
     callbacks: [
       require('postcss-sparrow-units-filter')({
-        units: options.units,
-        inclusion: true,
+        units: options.units.units,
+        inclusion: options.units.inclusion,
         callbacks: [
           (decl) => {
             const maxSize = getMaxSize(options)(decl)
