@@ -4,9 +4,11 @@
 
 A PostCSS plugin that helps you automatically apply `clamp()` to values to achieve a fluid design efficently.
 
+This plugin uses [PostCSS Sparrow](https://www.npmjs.com/package/postcss-sparrow), [PostCSS Sparrow Units Filter](https://www.npmjs.com/package/postcss-sparrow-units-filter) and [PostCSS Sparrow Props Filter](https://www.npmjs.com/package/postcss-sparrow-props-filter) under the hood for filtering CSS declarations.
+
 ```css
 /* Before transformation */
-p{
+p {
   font-size: 30px;
   padding: 15px;
 }
@@ -43,7 +45,7 @@ module.exports = {
 
 ```css
 /* After transformation */
-p{
+p {
   font-size: clamp(30px, 4vw, 45px);
   padding: 15px;
 }
