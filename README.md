@@ -65,3 +65,21 @@ npm i postcss postcss-sparrow bewater
 ```
 
 Then import this plugin as the callback for [PostCSS Sparrow](https://www.npmjs.com/package/postcss-sparrow).
+
+## API Reference
+
+### `options.props` : Object
+
+Filter options for filtering CSS declaration by its prop.  Read the API reference of [PostCSS Sparrow Props Filter](https://www.npmjs.com/package/postcss-sparrow-props-filter#api-reference) for more details.
+
+### `options.units` : Object
+
+Filter options for filtering CSS declaration by its prop.  Read the API reference of [PostCSS Sparrow Units Filter](https://www.npmjs.com/package/postcss-sparrow-units-filter#api-reference) for more details.
+
+### `options.scale` : Number
+
+Multiplier for the original value, and the product will be used as the 3rd param for `clamp()`.
+
+### `options.changeRate` : String
+
+The rate for the value to change.  This value will be used as the 2nd param for `clamp()`.
