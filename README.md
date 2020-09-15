@@ -1,5 +1,7 @@
 # Be water
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ff6544cbff114d008f05708e334f987a)](https://www.codacy.com/manual/winston0410/bewater?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=winston0410/bewater&amp;utm_campaign=Badge_Grade) [![Known Vulnerabilities](https://snyk.io/test/github/winston0410/bewater/badge.svg?targetFile=package.json)](https://snyk.io/test/github/winston0410/bewater?targetFile=package.json) [![Maintainability](https://api.codeclimate.com/v1/badges/6822f950185d354940ba/maintainability)](https://codeclimate.com/github/winston0410/bewater/maintainability) [![Test Coverage](https://api.codeclimate.com/v1/badges/6822f950185d354940ba/test_coverage)](https://codeclimate.com/github/winston0410/bewater/test_coverage)
+
 **Be water, be fluid, be responsive.**
 
 ![Cover image for Be water](/gilles-rolland-monnet-water.jpg)
