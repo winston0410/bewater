@@ -1,5 +1,4 @@
 const postcss = require('postcss')
-const R = require('ramda')
 const chai = require('chai')
 const sinon = require('sinon')
 const expect = chai.expect
@@ -46,13 +45,30 @@ describe('Be water', function () {
               ]
             }
           ]
+        }),
+        require('postcss-sparrow')({
+          transformations: [
+            {
+              selectors: ['*'],
+              inclusion: true,
+              callbacks: [
+                require('postcss-sparrow-props-filter')({
+                  props: ['letter-spacing', 'padding'],
+                  inclusion: true,
+                  callbacks: [
+                    (decl) => {
+                      expect(decl.value).to.match(/^clamp/)
+                    }
+                  ]
+                })
+              ]
+            }
+          ]
         })
       ])
         .process(css, {
           from: undefined
         })
-
-      // console.log(result)
     })
   })
 })
