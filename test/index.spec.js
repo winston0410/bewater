@@ -39,6 +39,7 @@ describe('Be water', function () {
                 bewater.default({
                   scale: 2,
                   changeRate: '2vw',
+                  useMinMax: false,
                   props: {
                     props: ['*'],
                     inclusion: true
