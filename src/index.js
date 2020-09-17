@@ -10,6 +10,7 @@ export default (config) => (decl) => {
   const options = {
     scale: config.scale,
     changeRate: config.changeRate,
+    useMinMax: config.useMinMax,
     props: {
       props: config.props.props,
       inclusion: config.props.inclusion
@@ -30,7 +31,14 @@ export default (config) => (decl) => {
         callbacks: [
           (decl) => {
             const maxSize = getMaxSize(options)(decl)
-            const clampedValue = `clamp(${decl.value}, ${options.changeRate}, ${maxSize})`
+            const clampedValue = S.ifElse(
+              S.equals(true)
+            )(
+              () => minmax(decl.value)(options.changeRate)(maxSize)
+            )(
+              () => clamp(decl.value)(options.changeRate)(maxSize)
+            )(options.useMinMax)
+
             decl.replaceWith(`${decl.prop}: ${clampedValue}`)
           }
         ]
