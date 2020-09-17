@@ -80,16 +80,20 @@ Then import this plugin as the callback for [PostCSS Sparrow](https://www.npmjs.
 
 ### `options.props` : Object
 
-Filter options for filtering CSS declaration by its prop.  Read the API reference of [PostCSS Sparrow Props Filter](https://www.npmjs.com/package/postcss-sparrow-props-filter#api-reference) for more details.
+Filter options for filtering CSS declaration by its prop.  Read the API reference of [PostCSS Sparrow Props Filter](https://www.npmjs.com/package/postcss-sparrow-props-filter#api-reference) for more details. `props` defaults to `[*]` and `inclusion` defaults to `true`.
 
 ### `options.units` : Object
 
-Filter options for filtering CSS declaration by its prop.  Read the API reference of [PostCSS Sparrow Units Filter](https://www.npmjs.com/package/postcss-sparrow-units-filter#api-reference) for more details.
+Filter options for filtering CSS declaration by its prop.  Read the API reference of [PostCSS Sparrow Units Filter](https://www.npmjs.com/package/postcss-sparrow-units-filter#api-reference) for more details. `units` defaults to `[*]` and `inclusion` defaults to `true`.
 
 ### `options.scale` : Number
 
-Multiplier for the original value, and the product will be used as the 3rd param for `clamp()`.
+Multiplier for the original value, and the product will be used as the 3rd param for `clamp()`.  Default to `2`.
 
 ### `options.changeRate` : String
 
-The rate for the value to change.  This value will be used as the 2nd param for `clamp()`.
+The rate for the value to change.  This value will be used as the 2nd param for `clamp()`. Default to `2vw`.
+
+### `options.useMinMax` : Boolean
+
+Set `true` to use the combination of `min()` and `max()` to replace `clamp()`, achieving the same result but with a [wider browser support](https://caniuse.com/?search=min()). Default to `false`.
