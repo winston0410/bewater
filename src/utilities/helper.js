@@ -1,5 +1,7 @@
 import {
-  getValue
+  getValue,
+  clamp,
+  minmax
 } from './partial-functions/value.js'
 
 import {
@@ -25,5 +27,7 @@ const getMaxSize = (options) => (decl) => S.pipe([
 ])(decl)
 
 export {
-  getMaxSize
+  getMaxSize,
+  clamp,
+  minmax
 }

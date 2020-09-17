@@ -1,5 +1,7 @@
 import {
-  getMaxSize
+  getMaxSize,
+  clamp,
+  minmax
 } from './utilities/helper.js'
 
 import * as S from 'sanctuary'
