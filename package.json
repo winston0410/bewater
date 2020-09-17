@@ -12,6 +12,7 @@
     "postcss-sparrow-props-filter": "^0.1.4",
     "postcss-sparrow-units-filter": "^0.1.6",
     "postcss-sparrow-values-filter": "^0.1.2",
+    "ramda": "^0.27.1",
     "sanctuary": "^3.1.0"
   },
   "peerDependencies": {
