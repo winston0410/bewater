@@ -5,19 +5,22 @@ import {
 } from './utilities/helper.js'
 
 import * as S from 'sanctuary'
+import {
+  defaultTo
+} from 'ramda'
 
 export default (config) => (decl) => {
   const options = {
-    scale: config.scale,
-    changeRate: config.changeRate,
-    useMinMax: config.useMinMax,
+    scale: defaultTo(2)(config.scale),
+    changeRate: defaultTo('2vw')(config.changeRate),
+    useMinMax: defaultTo(false)(config.useMinMax),
     props: {
-      props: config.props.props,
-      inclusion: config.props.inclusion
+      props: defaultTo(['*'])(config.props.props),
+      inclusion: defaultTo(true)(config.props.inclusion)
     },
     units: {
-      units: config.units.units,
-      inclusion: config.units.inclusion
+      units: defaultTo(['*'])(config.units.units),
+      inclusion: defaultTo(true)(config.units.inclusion)
     }
   }
 
