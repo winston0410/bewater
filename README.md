@@ -93,7 +93,3 @@ Multiplier for the original value, and the product will be used as the 3rd param
 ### `options.changeRate` : String
 
 The rate for the value to change.  This value will be used as the 2nd param for `clamp()`. Default to `2vw`.
-
-### `options.useMinMax` : Boolean
-
-Set `true` to use the combination of `min()` and `max()` to replace `clamp()`, achieving the same result but with a [wider browser support](https://caniuse.com/?search=min()). Default to `false`.
