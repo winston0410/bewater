@@ -19,7 +19,7 @@
     "postcss": "^8.1.0"
   },
   "devDependencies": {
-    "postcss": "^8.1.0",
+    "postcss": "8.1.0",
     "eslint-plugin-ramda": "2.5.1",
     "@logux/eslint-config": "40.0.5",
     "@rollup/plugin-commonjs": "15.1.0",
