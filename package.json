@@ -1,6 +1,6 @@
 {
   "name": "bewater",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A PostCSS plugin that helps you automatically apply `clamp()` to values to achieve a fluid design efficently.",
   "main": "./dist/index.cjs.js",
   "files": [
