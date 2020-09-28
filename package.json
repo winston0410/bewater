@@ -8,7 +8,7 @@
     "dist/"
   ],
   "dependencies": {
-    "postcss-sparrow": "^0.4.7",
+    "postcss-sparrow": "^1.0.0",
     "postcss-sparrow-props-filter": "^0.1.4",
     "postcss-sparrow-units-filter": "^0.1.6",
     "postcss-sparrow-values-filter": "^0.1.2",
