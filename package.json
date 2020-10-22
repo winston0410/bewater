@@ -21,7 +21,7 @@
   "devDependencies": {
     "postcss": "^8.1.0",
     "eslint-plugin-ramda": "2.5.1",
-    "@logux/eslint-config": "40.0.5",
+    "@logux/eslint-config": "41.0.2",
     "@rollup/plugin-commonjs": "15.1.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "chai": "4.2.0",
