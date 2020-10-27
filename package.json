@@ -22,7 +22,7 @@
     "postcss": "^8.1.0",
     "eslint-plugin-ramda": "2.5.1",
     "@logux/eslint-config": "40.0.5",
-    "@rollup/plugin-commonjs": "15.1.0",
+    "@rollup/plugin-commonjs": "16.0.0",
     "@rollup/plugin-node-resolve": "9.0.0",
     "chai": "4.2.0",
     "chai-arrays": "2.2.0",
