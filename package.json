@@ -23,7 +23,7 @@
     "eslint-plugin-ramda": "2.5.1",
     "@logux/eslint-config": "40.0.5",
     "@rollup/plugin-commonjs": "15.1.0",
-    "@rollup/plugin-node-resolve": "9.0.0",
+    "@rollup/plugin-node-resolve": "13.0.0",
     "chai": "4.2.0",
     "chai-arrays": "2.2.0",
     "chai-match": "1.1.1",
